@@ -62,9 +62,16 @@ DB_PASSWORD=cambia_esta_contraseña
 DB_HOST=127.0.0.1
 DB_PORT=5432
 ```
+Si necesitas generar una clave secreta segura para tu archivo `.env`, puedes ejecutar el siguiente comando en tu terminal:
 
+```bash
+pipenv run python -c "from django.core.management.utils import get_random_secret_key; print(get_random_secret_key())"
+```
 
 5. Ejecuta las migraciones:
+    ```bash
+   pipenv run python manage.py makemigrations
+    ``` 
 
    ```bash
    pipenv run python manage.py migrate
