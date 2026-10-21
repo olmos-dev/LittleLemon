@@ -1,0 +1,29 @@
+Users and roles:
+
+| Username | Email          | Nombre | Apellido | Grupo               | Staff |
+|----------|----------------|--------|----------|---------------------|-------|
+| user1    | user1@mail.com | Emily  | Carter   | Manager             | Si    |
+| user2    | user2@mail.com | James  | Anderson | Delivery crew       | No    |
+| user3    | user3@mail.com | Olivia | Bennett  | Delivery crew       | No    |
+| user4    | user4@mail.com | Daniel | Wilson   | Delivery crew       | No    |
+| user5    | user5@mail.com | Sophie | Mitchell | Client              | No    |
+| user6    | user6@mail.com | Henry  | Thompson | Client              | No    |
+
+password for everyone: mypassword123
+
+Important:
+If you want to populate the database, run the seed command:
+python manage.py poblar_bd
+
+To reset the database for testing, follow these steps:
+1. Delete db.sqlite3
+2. python manage.py migrate
+3. python manage.py seed
+3. python manage.py poblar_bd (optional)
+
+Warning: poblar_bd clears the cart, categories, menu items,
+orders and order items before recreating the sample data.
+It does not delete or modify users.
+
+Enjoy it, and wish me good luck!
+
